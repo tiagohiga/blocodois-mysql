@@ -7,7 +7,7 @@ CREATE TABLE tb_produtos(
 	ean VARCHAR(255),
 	quantidade INT,
 	setor VARCHAR(255),
-    preco FLOAT NOT NULL,
+    	preco FLOAT NOT NULL,
 	data_entrada DATE,
 
 	PRIMARY KEY(id_produto)
@@ -15,22 +15,22 @@ CREATE TABLE tb_produtos(
 
 CREATE TABLE tb_clientes(
 	id_cliente INT NOT NULL AUTO_INCREMENT,
-    nome VARCHAR(255),
-    email VARCHAR(255),
-    cpf VARCHAR(255),
+    	nome VARCHAR(255),
+    	email VARCHAR(255),
+    	cpf VARCHAR(255),
     
-    PRIMARY KEY(id_cliente)
+    	PRIMARY KEY(id_cliente)
 );
 
 CREATE TABLE tb_vendas(
 	id_venda INT NOT NULL AUTO_INCREMENT,
-    data_venda DATETIME,
-    fk_produto INT,
-    fk_cliente INT,
+    	data_venda DATETIME,
+    	fk_produto INT,
+    	fk_cliente INT,
     
-    PRIMARY KEY(id_venda),
-    FOREIGN KEY(fk_produto) REFERENCES tb_produtos(id_produto),
-    FOREIGN KEY(fk_cliente) REFERENCES tb_clientes(id_cliente)
+    	PRIMARY KEY(id_venda),
+    	FOREIGN KEY(fk_produto) REFERENCES tb_produtos(id_produto),
+    	FOREIGN KEY(fk_cliente) REFERENCES tb_clientes(id_cliente)
 );
 
 INSERT INTO tb_produtos(nome, ean, quantidade, setor, preco, data_entrada) 

@@ -1,15 +1,14 @@
 CREATE DATABASE db_alunes;
 USE db_alunes;
 
-CREATE TABLE tb_alunes(
-	id_alunes INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE tb_alunes (
+    id_alunes INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255),
     matricula VARCHAR(255),
     sala VARCHAR(255),
     media FLOAT DEFAULT 0.0,
     data_nascimento DATE,
-    
-    PRIMARY KEY(id_alunes)
+    PRIMARY KEY (id_alunes)
 );
 
 INSERT INTO tb_alunes(nome, matricula, sala, media, data_nascimento) 

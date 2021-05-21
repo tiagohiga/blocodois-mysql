@@ -1,17 +1,16 @@
 CREATE DATABASE db_rh;
 USE db_rh;
 
-CREATE TABLE tb_funcionarios(
-	id_funcionario INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE tb_funcionarios (
+    id_funcionario INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
     sobrenome VARCHAR(255) NOT NULL,
-    data_nascimento DATE, 
+    data_nascimento DATE,
     cargo VARCHAR(255),
     endereco VARCHAR(255),
     data_inicio DATE,
     salario FLOAT NOT NULL,
-    
-    PRIMARY KEY(id_funcionario)
+    PRIMARY KEY (id_funcionario)
 );
 
 insert into tb_funcionarios 
